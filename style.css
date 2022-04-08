@@ -1,0 +1,36 @@
+a:link {
+
+}
+a:visited{
+
+}
+a:hover{
+
+}
+a:active{
+
+}
+img:first-of-type{
+    height: 7rem;
+    width: 8rem;
+}
+nav{
+    overflow: hidden;
+}
+nav #länkarna{
+    display: none;
+}
+nav a{
+    color: red;
+    display: block;
+}
+nav a.menyicon{
+    background: black;
+    display: block;
+    right: 0;
+    top: 0;
+}
+nav a:hover{
+    background-color: green;
+    color: brown;
+}
