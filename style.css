@@ -154,7 +154,7 @@ img:first-of-type{
 }
 .main-grid{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
 }
@@ -163,7 +163,7 @@ img:first-of-type{
   text-align: center;
 }
 .grid-item-two{
-  grid-column: 2;
+  grid-column: 3;
   text-align: center;
 }
 footer{
@@ -177,8 +177,15 @@ footer{
   padding-right: 50%;
   margin-left: -150px;
 }
+p{
+  font-size: 1.4vw;
+}
 
-
+@media only screen and (max-width: 861px) {
+  p{
+    font-size: 3vw;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   header nav {
