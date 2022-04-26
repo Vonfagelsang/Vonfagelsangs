@@ -198,7 +198,7 @@ th, td, table{
 caption{
   font-size: 3vw;
 }
-tr :nth-child(odd){
+tr:nth-child(odd){
   background-color: red;
   font-size: 20px;
 }
