@@ -166,6 +166,10 @@ img:first-of-type{
   grid-column: 3;
   text-align: center;
 }
+.grid-item-three{
+  grid-column: 2;
+  text-align: center;
+}
 footer{
   position: fixed;
   bottom: 0;
@@ -175,15 +179,45 @@ footer{
   color: white;
   padding-left: 50%;
   padding-right: 50%;
-  margin-left: -150px;
+  margin-left: -13%;
 }
 p{
   font-size: 1.4vw;
 }
+.h1{
+  font-size: 45px;
+  color: blueviolet;
+  background-color: coral;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+th, td, table{
+  border: black solid 1px;
+  background-color: inherit;
+  padding: 4px;
+}
+caption{
+  font-size: 3vw;
+}
+tr :nth-child(odd){
+  background-color: red;
+  font-size: 20px;
+}
+
 
 @media only screen and (max-width: 861px) {
   p{
     font-size: 3vw;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding-left: 50%;
+    padding-right: 50%;
+    margin-left: -22%;
   }
 }
 
@@ -193,15 +227,18 @@ p{
   }
   .grid-item-one{
     grid-column: 1;
-    text-align: right;
+    text-align: center;
     position: relative;
     align-items: center;
-    text-align: center;
   }
+  
   .main-grid{
     grid-template-columns: 100%;
   }
   .grid-item-two{
+    grid-column: 1;
+  }
+  .grid-item-three{
     grid-column: 1;
   }
   #hamburger-icon {
