@@ -144,6 +144,7 @@ a{
 }
 nav{
   margin-right: 25%;
+  
 }
 
 
@@ -182,7 +183,7 @@ footer{
   margin-left: -13%;
 }
 p{
-  font-size: 1.4vw;
+  font-size: 1.4rem;
 }
 .h1{
   font-size: 45px;
@@ -193,20 +194,56 @@ p{
 th, td, table{
   border: black solid 1px;
   background-color: inherit;
+  font-size: 20px;
   padding: 4px;
 }
+table{
+  grid-column: 2;
+}
 caption{
-  font-size: 3vw;
+  font-size: 4rem;
 }
-tr:nth-child(odd){
-  background-color: red;
-  font-size: 20px;
+td:nth-child(odd){
+  background-color: rgb(78, 76, 76);
 }
+td:nth-child(even){
+  background-color: gray;
+}
+th:nth-child(odd){
+  background-color: gray;
+}
+th:nth-child(even){
+  background-color: rgb(95, 86, 86);
+}
+.länk-låda{
+  border: black solid 1px;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: -60px;
+}
+.länk-låda a{
+  border: black solid 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: white;
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.länk-låda a:hover{
+  background-color: gray;
+  color: black;
 
+}
 
 @media only screen and (max-width: 861px) {
   p{
-    font-size: 3vw;
+    font-size: 1rem;
   }
   footer{
     position: fixed;
@@ -218,6 +255,17 @@ tr:nth-child(odd){
     padding-left: 50%;
     padding-right: 50%;
     margin-left: -22%;
+  }
+  .länk-låda{
+    border: black solid 1px;
+    border-radius: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+  .grid-item-two{
+    grid-column: 1;
   }
 }
 
@@ -239,6 +287,9 @@ tr:nth-child(odd){
     grid-column: 1;
   }
   .grid-item-three{
+    grid-column: 1;
+  }
+  table{
     grid-column: 1;
   }
   #hamburger-icon {
