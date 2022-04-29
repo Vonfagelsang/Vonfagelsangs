@@ -38,6 +38,7 @@ ul a {
 ul li {
   padding: 5px;
   margin-left: 10px;
+  transition: 0.4s;
 }
 
 ul li:hover {
@@ -234,11 +235,13 @@ th:nth-child(even){
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 5px;
+  transition: 1.4s;
 }
 .länk-låda a:hover{
-  background-color: gray;
-  color: black;
-
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 @media only screen and (max-width: 861px) {
