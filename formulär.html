@@ -9,32 +9,64 @@
     <title>Formulär sida</title>
 </head>
 <body>
-    <header> 
-        <img src="https://static.wikia.nocookie.net/totalwar-ar/images/0/00/Flag_of_Hungary.png/revision/latest?cb=20120905151154">
-        <nav>
-            <ul>
-                <li><a href="index.html">Framsida</a></li>
-                <li><a href="info.html">Info sida</a></li>
-                <li><a href="media.html">Media sida </a></li>
-                <li><a href="formulär.html">Formulär </a></li>
-            </ul>
-        </nav>
-            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <div class="bar4"></div>
-                <ul class="mobile-menu">
-                  <li><a href="index.html">Framsida</a></li>
-                  <li><a href="info.html">Info sida</a></li>
-                  <li><a href="media.html">Media sida</a></li>
-                  <li><a href="formulär.html">Formulär</a></li>
-                </ul>
-            </div>
+    <header class="head-alt"> 
+        <h1>
+            Välkomenn till formuläret!
+        </h1>
+        <p>
+            aisdgyaigdiaidgaigwiugisdygaiudgiausghduauisdgigadiwygaigsiyd
+        </p>
     </header>
-    <footer>
-        <h2>Blasjghadiagsudh</h2>
-        <p>adfjpfgjisofgsfjspdfsdfjhsodfhoshdfuihsoidf </p>
+    <main>
+        <form class="form-grid" action="Tack.html" method="GET">
+            <fieldset class="form-item1" >
+                <legend>Basic info</legend>
+                <div>
+                    <label for="namn">Namn</label>
+                    <input id="namn" type="text" name="namn" required placeholder="Steve Stevensson">
+                </div>
+                <div class="form-item2">
+                    <p>Vad vill du annvända din dator till?</p>
+                    <label for="spel">Spel</label>
+                    <input id="spel" type="checkbox" name="spel" value="spel">
+                    <label for="Livestreaming">Livestreaming</label>
+                    <input id="Livestreaming" type="checkbox" name="Livestreaming" value="Livestreaming">
+                    <label for="Grafisk design">Grafisk design</label>
+                    <input id="Grafisk design" type="checkbox" name="Grafisk design" value="Grafisk design">
+                    <label for="Skolarbete/ arbete">Skolarbete/ arbete</label>
+                    <input id="Skolarbete/ arbete" type="checkbox" name="Skolarbete/ arbete" value="Skolarbete/ arbete" checked>
+                </div>
+            </fieldset>
+            <fieldset class="form-item2">
+                <legend>Specifik info</legend>
+                <div>
+                <label for="bruh">Bruh</label>
+                <select id="bruh">
+                    <option value="bruh" selected>Bruh</option>
+                </select>
+                </div>
+            </fieldset>
+            <fieldset class="form-item3">
+                <legend>Personuppgifter</legend>
+                <div>
+                    <label for="gmail">Gmail</label>
+                    <input id="gmail" type="email" name="gmail" value="" placeholder="example@gmail.com" >
+                    <label for="tid">Föredragen tid</label>
+                    <input id="tid" type="date" name="tid" required max="2025-01-01">
+                </div>
+            </fieldset>
+            <div class="form-item3">
+                <label for="textarea">Något extra du vill skriva:</label>
+                <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
+            </div>
+            
+            <label for="password" class="form-item1">Lösernord:</label>
+            <input id="password" type="password" name="password" minlength="8" pattern=".{8,}" title="minst åtta karaktärer" class="form-item1" required>
+            <input type="submit" value="Submit" class="form-item2">
+        </form>
+    </main>
+    <footer class="foot-alt">
+        
     </footer>
 </body>
 </html>
