@@ -11,7 +11,7 @@
 <body>
     <header class="head-alt"> 
         <h1>
-            Välkomenn till formuläret!
+            Välkomen till formuläret!
         </h1>
         <p>
             aisdgyaigdiaidgaigwiugisdygaiudgiausghduauisdgigadiwygaigsiyd
@@ -55,14 +55,17 @@
                     <input id="tid" type="date" name="tid" required max="2025-01-01">
                 </div>
             </fieldset>
-            <div class="form-item3">
+            <div class="form-item1">
                 <label for="textarea">Något extra du vill skriva:</label>
                 <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
             </div>
             
-            <label for="password" class="form-item1">Lösernord:</label>
-            <input id="password" type="password" name="password" minlength="8" pattern=".{8,}" title="minst åtta karaktärer" class="form-item1" required>
-            <input type="submit" value="Submit" class="form-item2">
+            <article class="lösenord">
+                <label for="password">Lösernord:</label>
+                <input id="password" type="password" name="password" minlength="8" pattern=".{8,}" title="minst åtta karaktärer" class="form-item1" required>
+                <input type="submit" value="Submit" class="submit">
+            </article>
+            
         </form>
     </main>
     <footer class="foot-alt">
