@@ -16,6 +16,9 @@ p::after{
 form p::after{
   content:" ";
 }
+footer p::after{
+  content:" ";
+}
 p::first-letter{
   text-transform: capitalize;
 }
@@ -24,6 +27,10 @@ p::first-letter{
   margin: 0;
   box-sizing: border-box;
 }
+                                                @font-face {
+                                                  font-family: Font;
+                                                  src: url();
+                                                }
 header {
   padding-left: 5ex;
   height: 7rem;
@@ -177,6 +184,7 @@ footer{
   color: white;
   padding-left: 40%;
   padding-right: 39.45%;  
+
 }
 .foot-alt{
   bottom: none;
