@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Baar;
+  src: url(baarprg_.TTF);
+} 
 a:link {
   color: white;
 }
@@ -10,6 +14,7 @@ a:hover{
 a:active{
   color: cadetblue;
 }
+
 p::after{
   content: ".";
 }
@@ -23,14 +28,11 @@ p::first-letter{
   text-transform: capitalize;
 }
 * {
+  font-family: Baar;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-                                                @font-face {
-                                                  font-family: Font;
-                                                  src: url();
-                                                }
 header {
   padding-left: 5ex;
   height: 7rem;
@@ -155,6 +157,7 @@ nav{
 }
 img:first-of-type{
   height: 7rem;
+  display: inline;
   width: 8rem;
   margin-left: -35px;
 }
