@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Länkar extern CSS och javascript -->
     <link rel="stylesheet" href="style.css">
     <script src="java.js"></script>
     <title>Välkommen till Vonfagelsang:s!</title>
@@ -11,22 +12,27 @@
 <body>
     <header> 
         <figure>
+            <!--Har figure tagg för ARIA landmark, samt organisering i header -->
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Wiki-tech-logo.svg" alt="Image of website logo">
         </figure>
         <nav>
+            <!--nav tagg för globall navigationsmeny -->
             <ul>
+                <!--Annvänder lista för länkarna, eftersom att @media quaries kommer ändra listan till vertikal -->
                 <li><a href="index.html">Framsida</a></li>
                 <li><a href="info.html">Info sida</a></li>
                 <li><a href="media.html">Media sida </a></li>
                 <li><a href="formulär.html">Formulär </a></li>
             </ul>
         </nav>
+            <!--En till nav tagg, eftersom att menyn ser anourlunda ut när den visas på mindre skärm, har också en fuktion i javascript som animerar menyn. -->
             <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 <div class="bar4"></div>
                 <ul class="mobile-menu">
+                    <!--Lista med alla länkar -->
                   <li><a href="index.html">Framsida</a></li>
                   <li><a href="info.html">Info sida</a></li>
                   <li><a href="media.html">Media sida</a></li>
@@ -35,6 +41,7 @@
             </div>
     </header>
     <main class="main-grid"> 
+        <!--Annvänder main tagg för huvudinnehållet, samt annvänder den som en grid för att få trespaltsayout -->
         <div class="grid-item-one">
             <h1>Titel bajshldahsldasdakjdaj </h1>
             <section>
@@ -45,10 +52,15 @@
             <h1 class="h1">Välkommen till Vonfagelsang:s!</h1>
         </section>
         <article class="grid-item-two">
+            <!--Har en iframe för att spela upp extern media fil från youtube, annvänder article för att den har en header och är lite seperat från main innehållet. -->
+            <header class="head-alt">
+                <h1>Här är en tutorial som kan vara annvänbar:</h1>
+            </header>
             <iframe src="https://www.youtube-nocookie.com/embed/v7MYOpFONCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
         </article>
-    </main>
+    </main> 
     <footer>
+        <!--Footer som med css är längst ner på sidan-->
         <h2>Blasjghadiagsudh</h2>
         <p>adfjpfgjisofgsfjspdfsdfjhsodfhoshdfuihsoidf </p>
     </footer>

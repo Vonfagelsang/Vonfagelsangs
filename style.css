@@ -2,19 +2,20 @@
   font-family: Baar;
   src: url(baarprg_.TTF);
 } 
+/*@font-face annvänds för att importera en ny font */
 a:link {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 a:visited{
-  color: antiquewhite;
+  color: rgb(238, 224, 206);
 }
 a:hover{
-  color: gray;
+  color: #808080;
 }
 a:active{
-  color: cadetblue;
+  color: hsl(192, 40%, 50%);
 }
-
+/*Love Focus Hate på alla länkar */
 p::after{
   content: ".";
 }
@@ -27,28 +28,32 @@ footer p::after{
 p::first-letter{
   text-transform: capitalize;
 }
+/*Annvänder p:: för att automatiskt lägga till stor bokstav och punkt, förutom på formuläret och footer taggen */
 * {
   font-family: Baar;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* * annvänds för att göra så att alla element har samma font familj och liknande */
 header {
   padding-left: 5ex;
   height: 7rem;
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   margin-bottom: 5rem;
 }
+/* Annvänder flex för att orientera elementet samt sakerna i */
 .head-alt{
   padding-left: 0;
   height: 0;
   display: unset;
   justify-content: unset;
   margin-bottom: 0;
-  color: black;
+  color: rgb(0, 0, 0);
 }
+/*Har en alt till flera css då elementet automatikst annvänder CSS från åvan, då har jag en class som strycker över CSS:en */
 ul {
   list-style: none;
   height: 100%;
@@ -57,8 +62,8 @@ ul {
   justify-content: space-around;
 }
 ul a {
-  color: white;
-  background-color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 ul li {
   padding: 5px;
@@ -69,6 +74,7 @@ ul li:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
+/*Har ul CSS med en hover, för att få den att bli lite större när man har musen över */
 #hamburger-icon {
   margin: auto 0;
   display: none;
@@ -77,10 +83,11 @@ ul li:hover {
 #hamburger-icon div {
   width: 35px;
   height: 3px;
-  background-color: white;
+  background-color: hsl(192, 40%, 100%);
   margin: 6px 0;
   transition: 0.4s;
 }
+/*Har en hamburger icon, vilket är den globala menyn när skärmen är liten */
 .open .bar1 {
 -webkit-transform: rotate(-45deg) translate(-6px, 6px);
 transform: rotate(-45deg) translate(-6px, 6px);
@@ -92,13 +99,13 @@ transform: rotate(-45deg) translate(-6px, 6px);
   -webkit-transform: rotate(45deg) translate(-6px, -8px);
   transform: rotate(45deg) translate(-6px, -8px);
 }
+/*Annvänder animation med webkit transfom och transform */
 .open .mobile-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 5rem;
-
 }
 .mobile-menu {
   display: none;
@@ -106,17 +113,6 @@ transform: rotate(-45deg) translate(-6px, 6px);
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
-}
-@media only screen and (max-width: 861px) {
-  header nav {
-    display: none;
-  }
-  header{
-    margin-bottom: 13rem;
-  }
-  #hamburger-icon {
-    display: block;
-  }
 }
 .open .bar1 {
   -webkit-transform: rotate(-45deg) translate(-6px, 6px);
@@ -161,6 +157,7 @@ img:first-of-type{
   width: 8rem;
   margin-left: -35px;
 }
+/*Har en first of type så att loggan alltid har samma CSS på alla sidor */
 .main-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -182,19 +179,19 @@ img:first-of-type{
 footer{
   bottom: 0;
   position: absolute;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   text-align: center;
-  color: white;
+  color: hsl(192, 40%, 100%);
   padding-left: 40%;
   padding-right: 39.45%;  
-
 }
+/*Annvänder position absolute för att se till att den stannar längst ner med bottom:0; */
 .foot-alt{
   bottom: none;
   position:unset;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   text-align: none;
-  color: black;
+  color: rgb(0, 0, 0);
   padding-left: 0;
   padding-right: 0;  
 }
@@ -203,8 +200,8 @@ p{
 }
 .h1{
   font-size: 45px;
-  color: blueviolet;
-  background-color: coral;
+  color: rgb(136, 43, 223);
+  background-color: rgb(255, 125, 78);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 th, td, table{
@@ -213,24 +210,29 @@ th, td, table{
   font-size: 20px;
   padding: 4px;
 }
+/*Gör så att både th, td och table har en border */
 table{
   grid-column: 2;
+}
+article{
+  border: black 1px solid;
 }
 caption{
   font-size: 4rem;
 }
 td:nth-child(odd){
-  background-color: rgb(78, 76, 76);
+  background-color: rgb(78, 75, 75);
 }
 td:nth-child(even){
-  background-color: gray;
+  background-color: rgb(128, 126, 126);
 }
 th:nth-child(odd){
-  background-color: gray;
+  background-color: rgb(129, 128, 128);
 }
 th:nth-child(even){
-  background-color: rgb(95, 86, 86);
+  background-color: rgb(94, 85, 85);
 }
+/*Här har jag zebra striping med nth-child odd och even i en tabell */
 .länk-låda{
   border: black solid 1px;
   border-radius: 10px;
@@ -239,14 +241,14 @@ th:nth-child(even){
   margin-top: -60px;
 }
 .länk-låda a{
-  border: black solid 1px;
+  border: rgb(0, 0, 0) solid 1px;
   display: grid;
   grid-template-columns: 1fr;
   border-radius: 10px;
   padding-left: 60px;
   padding-right: 60px;
-  background-color: white;
-  color: black;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 5px;
@@ -271,7 +273,6 @@ iframe{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-
 }
 .form-item1{
   grid-column: 1;
@@ -283,9 +284,10 @@ iframe{
   grid-column: 3;
 }
 textarea:optional{
-  background-color: teal;
+  background-color: rgb(0, 126, 126);
   color: yellow;
 }
+/*Jag har en textarea med optional, så att bara en textarea som är optional har CSS, om den är required så kommer den inte ha den här CSS:en */
 .lösenord{
   margin-top: 20px;
   grid-column: 1;
@@ -310,6 +312,12 @@ textarea:optional{
   header nav {
     display: none;
   }
+  header{
+    margin-bottom: 13rem;
+  }
+  #hamburger-icon {
+    display: block;
+  }
   .form-grid{
     grid-template-columns: 1fr;
   }
@@ -318,6 +326,9 @@ textarea:optional{
   }
   a{
     font-size: 4vmin;
+  }
+  .main-grid{
+    grid-template-columns: 100%;
   }
   .grid-item-one{
     grid-column: 1;
@@ -331,7 +342,7 @@ textarea:optional{
     background-color: black;
     text-align: center;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     padding-left: 50%;
     padding-right: 50%;
     margin-left: -22%;
@@ -341,6 +352,14 @@ textarea:optional{
   }
   .grid-item-three{
     grid-column: 1;
+  }
+  .länk-låda{
+    border: rgb(0, 0, 0) solid 1px;
+    border-radius: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 5px;
+    margin-bottom: 40px;
   }
   table{
     grid-column: 1;
@@ -352,21 +371,4 @@ textarea:optional{
     grid-column: 1;
   }
 }
-
-@media only screen and (max-width: 861px) {
-  #hamburger-icon {
-    display: block;
-  }
-  .länk-låda{
-    border: black solid 1px;
-    border-radius: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 5px;
-    margin-bottom: 40px;
-  }
-  .main-grid{
-    grid-template-columns: 100%;
-  }
-
-}
+/*Annvänder media för att den ska ändra CSS när skärmen är mindre än 861px för att göra sidan enklare att se på mobilen */

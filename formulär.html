@@ -18,16 +18,20 @@
         </p>
     </header>
     <main>
+        <!--Annvänder form tagg för att skapa ett formulär -->
         <form class="form-grid" action="Tack.html" method="GET">
-            <fieldset class="form-item1" >
+            <fieldset class="form-item1">
+                <!--Annvänder fieldset för att formuläret har olika sektioner, den har en legend som titel och divs som sektioner -->
                 <legend>Basic info</legend>
                 <div>
                     <label for="namn">Namn</label>
+                    <!--Har requierd och placeholder för att få annvändaren att skriva sitt namn med ett exempel -->
                     <input id="namn" type="text" name="namn" required placeholder="Steve Stevensson">
                 </div>
                 <div class="form-item2">
                     <p>Vad vill du annvända din dator till?</p>
                     <label for="spel">Spel</label>
+                    <!--Har chechbox med checked längst ner, som automatiskt fyller i den -->
                     <input id="spel" type="checkbox" name="spel" value="spel">
                     <label for="Livestreaming">Livestreaming</label>
                     <input id="Livestreaming" type="checkbox" name="Livestreaming" value="Livestreaming">
@@ -40,15 +44,17 @@
             <fieldset class="form-item2">
                 <legend>Specifik info</legend>
                 <div>
-                <label for="bruh">Bruh</label>
-                <select id="bruh">
-                    <option value="bruh" selected>Bruh</option>
-                </select>
+                    <!--Label tagg där man väljer ett alternativ med select och option meny -->
+                    <label for="bruh">Bruh</label>
+                    <select id="bruh">
+                        <option value="bruh" selected>Bruh</option>
+                    </select>
                 </div>
             </fieldset>
             <fieldset class="form-item3">
                 <legend>Personuppgifter</legend>
                 <div>
+                    <!--Gmail och tid tagg för att välja ett datum och skriva in gmail -->
                     <label for="gmail">Gmail</label>
                     <input id="gmail" type="email" name="gmail" value="" placeholder="example@gmail.com" >
                     <label for="tid">Föredragen tid</label>
@@ -56,20 +62,19 @@
                 </div>
             </fieldset>
             <div class="form-item1">
+                <!--En textare för att man ska kunna skriva in vad man vill -->
                 <label for="textarea">Något extra du vill skriva:</label>
                 <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
             </div>
-            
             <article class="lösenord">
+                <!--Lösenord för att kunna sckika in formuläret -->
                 <label for="password">Lösernord:</label>
                 <input id="password" type="password" name="password" minlength="8" pattern=".{8,}" title="minst åtta karaktärer" class="form-item1" required>
                 <input type="submit" value="Submit" class="submit">
             </article>
-            
         </form>
     </main>
     <footer class="foot-alt">
-        
     </footer>
 </body>
 </html>
