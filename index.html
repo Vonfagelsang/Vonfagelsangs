@@ -26,7 +26,7 @@
             </ul>
         </nav>
             <!--En till nav tagg, eftersom att menyn ser anourlunda ut när den visas på mindre skärm, har också en fuktion i javascript som animerar menyn. -->
-            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <nav id="hamburger-icon" onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -38,7 +38,7 @@
                   <li><a href="media.html">Media sida</a></li>
                   <li><a href="formulär.html">Formulär</a></li>
                 </ul>
-            </div>
+            </nav>
     </header>
     <main class="main-grid"> 
         <!--Annvänder main tagg för huvudinnehållet, samt annvänder den som en grid för att få trespaltsayout -->
@@ -49,14 +49,14 @@
             </section>
         </div>
         <section class="grid-item-three">
-            <h1 class="h1">Välkommen till Vonfagelsang:s!</h1>
+            <h2 class="h2">Välkommen till Vonfagelsang:s!</h2>
         </section>
         <article class="grid-item-two">
             <!--Har en iframe för att spela upp extern media fil från youtube, annvänder article för att den har en header och är lite seperat från main innehållet. -->
             <header class="head-alt">
-                <h1>Här är en tutorial som kan vara annvänbar:</h1>
+                <h2>Här är en tutorial som kan vara annvänbar:</h2>
             </header>
-            <iframe src="https://www.youtube-nocookie.com/embed/v7MYOpFONCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <iframe src="https://www.youtube-nocookie.com/embed/v7MYOpFONCU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
         </article>
     </main> 
     <footer>

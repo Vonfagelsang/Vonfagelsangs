@@ -1,8 +1,9 @@
+/*@font-face annvänds för att importera en ny font */
 @font-face {
   font-family: Baar;
   src: url(baarprg_.TTF);
 } 
-/*@font-face annvänds för att importera en ny font */
+/*Love Focus Hate på alla länkar */
 a:link {
   color: rgb(255, 255, 255);
 }
@@ -15,7 +16,7 @@ a:hover{
 a:active{
   color: hsl(192, 40%, 50%);
 }
-/*Love Focus Hate på alla länkar */
+/*Annvänder p:: för att automatiskt lägga till stor bokstav och punkt, förutom på formuläret och footer taggen */
 p::after{
   content: ".";
 }
@@ -28,23 +29,25 @@ footer p::after{
 p::first-letter{
   text-transform: capitalize;
 }
-/*Annvänder p:: för att automatiskt lägga till stor bokstav och punkt, förutom på formuläret och footer taggen */
+/* * annvänds för att göra så att alla element har samma font familj och liknande */
 * {
   font-family: Baar;
   padding: 0;
   margin: 0;
+  /*Jag har border-box för att se till att bordern blir korrekt storlek*/
   box-sizing: border-box;
 }
-/* * annvänds för att göra så att alla element har samma font familj och liknande */
+/* Annvänder flex för att orientera elementet samt sakerna i */
 header {
   padding-left: 5ex;
   height: 7rem;
   display: flex;
+  /*Har space-between för att separera a taggarna i header menyn */
   justify-content: space-between;
   background-color: rgb(0, 0, 0);
   margin-bottom: 5rem;
 }
-/* Annvänder flex för att orientera elementet samt sakerna i */
+/*Har en alt till flera css då elementet automatikst annvänder CSS från åvan, då har jag en class som strycker över CSS:en, med t.ex. unset och 0 på allt */
 .head-alt{
   padding-left: 0;
   height: 0;
@@ -53,31 +56,32 @@ header {
   margin-bottom: 0;
   color: rgb(0, 0, 0);
 }
-/*Har en alt till flera css då elementet automatikst annvänder CSS från åvan, då har jag en class som strycker över CSS:en */
-ul {
+ul{
   list-style: none;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-ul a {
+ul a{
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
 }
-ul li {
+ul li{
   padding: 5px;
   margin-left: 10px;
   transition: 0.4s;
 }
+/*Har ul CSS med en hover, för att få den att bli lite större när man har musen över */
 ul li:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
-/*Har ul CSS med en hover, för att få den att bli lite större när man har musen över */
+/*Har en hamburger icon, vilket är den globala menyn när skärmen är liten */
 #hamburger-icon {
   margin: auto 0;
   display: none;
+  /*Cursor pointer gör så att man kan se att det går att klicka på iconen*/
   cursor: pointer;
 }
 #hamburger-icon div {
@@ -87,7 +91,7 @@ ul li:hover {
   margin: 6px 0;
   transition: 0.4s;
 }
-/*Har en hamburger icon, vilket är den globala menyn när skärmen är liten */
+/*Annvänder animation med webkit transfom och transform */
 .open .bar1 {
 -webkit-transform: rotate(-45deg) translate(-6px, 6px);
 transform: rotate(-45deg) translate(-6px, 6px);
@@ -99,7 +103,6 @@ transform: rotate(-45deg) translate(-6px, 6px);
   -webkit-transform: rotate(45deg) translate(-6px, -8px);
   transform: rotate(45deg) translate(-6px, -8px);
 }
-/*Annvänder animation med webkit transfom och transform */
 .open .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -130,7 +133,6 @@ transform: rotate(-45deg) translate(-6px, 6px);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
 }
 .mobile-menu {
   display: none;
@@ -139,9 +141,8 @@ transform: rotate(-45deg) translate(-6px, 6px);
   left: 0;
   height: 10vh;
   width: 100%;
-  
 }
-.mobile-menu li {
+.mobile-menu li{
   margin-bottom: 10px;
 }
 a{
@@ -149,15 +150,13 @@ a{
 }
 nav{
   margin-right: 33%;
-  
 }
+/*Har en first of type så att loggan alltid har samma CSS på alla sidor */
 img:first-of-type{
   height: 7rem;
-  display: inline;
   width: 8rem;
   margin-left: -35px;
 }
-/*Har en first of type så att loggan alltid har samma CSS på alla sidor */
 .main-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -176,6 +175,7 @@ img:first-of-type{
   grid-column: 2;
   text-align: center;
 }
+/*Annvänder position absolute för att se till att den stannar längst ner med bottom:0; */
 footer{
   bottom: 0;
   position: absolute;
@@ -183,9 +183,9 @@ footer{
   text-align: center;
   color: hsl(192, 40%, 100%);
   padding-left: 40%;
-  padding-right: 39.45%;  
+  padding-right: 35.35%;  
 }
-/*Annvänder position absolute för att se till att den stannar längst ner med bottom:0; */
+/*Har igen massa unset ich none, så att de footer element som inte ska ha CSS:en ovan inte ska få den */
 .foot-alt{
   bottom: none;
   position:unset;
@@ -198,19 +198,19 @@ footer{
 p{
   font-size: 1.4rem;
 }
-.h1{
+.h2{
   font-size: 45px;
   color: rgb(136, 43, 223);
   background-color: rgb(255, 125, 78);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
+/*Gör så att både th, td och table har en border */
 th, td, table{
   border: black solid 1px;
   background-color: inherit;
   font-size: 20px;
   padding: 4px;
 }
-/*Gör så att både th, td och table har en border */
 table{
   grid-column: 2;
 }
@@ -220,6 +220,7 @@ article{
 caption{
   font-size: 4rem;
 }
+/*Här har jag zebra striping med nth-child odd och even i en tabell */
 td:nth-child(odd){
   background-color: rgb(78, 75, 75);
 }
@@ -232,7 +233,6 @@ th:nth-child(odd){
 th:nth-child(even){
   background-color: rgb(94, 85, 85);
 }
-/*Här har jag zebra striping med nth-child odd och even i en tabell */
 .länk-låda{
   border: black solid 1px;
   border-radius: 10px;
@@ -283,11 +283,11 @@ iframe{
 .form-item3{
   grid-column: 3;
 }
+/*Jag har en textarea med optional, så att bara en textarea som är optional har CSS, om den är required så kommer den inte ha den här CSS:en */
 textarea:optional{
   background-color: rgb(0, 126, 126);
   color: yellow;
 }
-/*Jag har en textarea med optional, så att bara en textarea som är optional har CSS, om den är required så kommer den inte ha den här CSS:en */
 .lösenord{
   margin-top: 20px;
   grid-column: 1;
@@ -308,6 +308,11 @@ textarea:optional{
   height: 500px;
   width: 500px;
 }
+video{
+  width: 540px;
+  height: 315px;
+}
+/*Annvänder media för att den ska ändra CSS när skärmen är mindre än 861px för att göra sidan enklare att se på mobilen */
 @media only screen and (max-width: 861px) {
   header nav {
     display: none;
@@ -371,4 +376,3 @@ textarea:optional{
     grid-column: 1;
   }
 }
-/*Annvänder media för att den ska ändra CSS när skärmen är mindre än 861px för att göra sidan enklare att se på mobilen */
