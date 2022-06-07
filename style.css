@@ -185,12 +185,12 @@ footer{
   padding-left: 40%;
   padding-right: 35.35%;  
 }
-/*Har igen massa unset ich none, så att de footer element som inte ska ha CSS:en ovan inte ska få den */
+/*Har igen massa unset och none, så att de footer element som inte ska ha CSS:en ovan inte ska få den */
 .foot-alt{
-  bottom: none;
-  position:unset;
+  bottom: unset;
+  position: unset;
   background-color: rgb(255, 255, 255);
-  text-align: none;
+  text-align: unset;
   color: rgb(0, 0, 0);
   padding-left: 0;
   padding-right: 0;  
