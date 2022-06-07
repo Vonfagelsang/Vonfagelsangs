@@ -261,8 +261,10 @@ th:nth-child(even){
   transition: 0.3s;
 }
 dl{
-  text-align: left;
   font-size: 1.5rem;
+  color: black;
+  text-align: left;
+  padding-left: unset;
 }
 iframe{
   width: 100%;
@@ -323,6 +325,9 @@ sen en vid 861px för att ändra på huvud navigationen, eftersom att man kan fo
     text-align: center;
     position: relative;
     align-items: center;
+  }
+  dl{
+    margin-left: 222.859px;
   }
   .grid-item-two{
     grid-column: 1;
