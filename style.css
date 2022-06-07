@@ -312,6 +312,42 @@ video{
   width: 540px;
   height: 315px;
 }
+/*Har två @media eftersom att sidan går sönder om man börjar minimera den, så jag har en vid 1257px för att stapla alla columber under varandra och 
+sen en vid 861px för att ändra på huvud navigationen, eftersom att man kan fortförande klicka på den över 861px */
+@media only screen and (max-width: 1257px){
+  .main-grid{
+    grid-template-columns: 100%;
+  }
+  .grid-item-one{
+    grid-column: 1;
+    text-align: center;
+    position: relative;
+    align-items: center;
+  }
+  .grid-item-two{
+    grid-column: 1;
+  }
+  .grid-item-three{
+    grid-column: 1;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding-left: 50%;
+    padding-right: 50%;
+    margin-left: -22%;
+  }
+  p{
+    font-size: 1rem;
+  }
+  table{
+    grid-column: 1;
+  }
+}
 /*Annvänder media för att den ska ändra CSS när skärmen är mindre än 861px för att göra sidan enklare att se på mobilen */
 @media only screen and (max-width: 861px) {
   header nav {
@@ -326,37 +362,8 @@ video{
   .form-grid{
     grid-template-columns: 1fr;
   }
-  p{
-    font-size: 1rem;
-  }
   a{
     font-size: 4vmin;
-  }
-  .main-grid{
-    grid-template-columns: 100%;
-  }
-  .grid-item-one{
-    grid-column: 1;
-    text-align: center;
-    position: relative;
-    align-items: center;
-  }
-  footer{
-    position: fixed;
-    bottom: 0;
-    background-color: black;
-    text-align: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    padding-left: 50%;
-    padding-right: 50%;
-    margin-left: -22%;
-  }
-  .grid-item-two{
-    grid-column: 1;
-  }
-  .grid-item-three{
-    grid-column: 1;
   }
   .länk-låda{
     border: rgb(0, 0, 0) solid 1px;
@@ -365,9 +372,6 @@ video{
     margin-right: 2px;
     margin-top: 5px;
     margin-bottom: 40px;
-  }
-  table{
-    grid-column: 1;
   }
   .form-item2{
     grid-column: 1;
